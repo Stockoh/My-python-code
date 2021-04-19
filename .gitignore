@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+__pycache__
+*.ipynb
+*.exe
+*.dll
+garticphone.jpg
+LICENSE.txt
+NEWS.txt
+dictionary.txt
