@@ -112,7 +112,7 @@ def decode(url):
             return Image(url[22:])
         if url[:23] == r"data:image/jpeg;base64,":  # JPEG in base 64
             data = base64.b64decode(url[22:])
-            with open("garticphone.jpg", "wb") as file:
+            with open(r"data\garticphone.jpg", "wb") as file:
                 file.write(data)
             return Image("garticphone.jpg")
         else:
