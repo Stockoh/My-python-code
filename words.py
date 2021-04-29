@@ -1,3 +1,6 @@
+import re
+
+
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 letterfrequency = {'a': 0.1032, 'b': 0.01602, 'c': 0.03807, 'd': 0.0238, 'e': 0.1415,
                    'f': 0.01277, 'g': 0.01811, 'h': 0.01439, 'i': 0.10517, 'j': 0.00194,
@@ -13,3 +16,18 @@ def is_word(word: str):
     word = word.upper()
     with open(r"data\dictionary.txt", "r") as file:
         return word in file.read()
+
+
+def find_word(regex: str):
+    """string of regex for find in the dictionary, this is a iterator"""
+    pattern = re.compile(regex)
+    with open(r"data\dictionary.txt", "r") as file:
+        for line in file:
+            if pattern.findall(line):
+                yield line[:-1]
+            if pattern.findall(line.lower()):
+                yield line[:-1].lower()
+
+
+if __name__ == "__main__":
+    pass
