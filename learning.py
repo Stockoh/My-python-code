@@ -1,7 +1,7 @@
 import random
 import copy
 
-###Menace Code###
+# Menace Code
 
 
 class Box:
